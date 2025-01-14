@@ -1,38 +1,38 @@
-# Little Lemon Capstone Project
+# 🍋 Little Lemon Capstone Project
 
-## Description
-Little Lemon is a Mediterranean restaurant website created as the capstone project for Meta's Frontend Developer Professional Certificate. The project aims to provide a modern, responsive, and interactive user experience, allowing customers to explore the menu, learn more about the restaurant, and make reservations easily.
-
----
-
-## Technologies Used
-
-### Frontend
-- **React**: Main library for building user interface components.
-- **TypeScript**: Adds static typing to JavaScript, improving code quality and maintainability.
-- **Vite**: A fast development tool for building modern web applications.
-- **Tailwind CSS**: A utility-first CSS framework for rapid and customizable design.
-
-### Assets
-- **Images**: Optimized images to improve performance.
-- **Google Fonts**: 'Markazi Text' font for an elegant and readable style.
-
-### Development Tools
-- **Node.js**: Runtime environment for building server-side and networking applications.
-- **ESLint and Prettier**: Tools to ensure code quality and consistency.
-- **Git and GitHub**: Version control and remote repository management.
+## 📖 Description
+**Little Lemon** is a Mediterranean restaurant website created as the capstone project for **Meta's Frontend Developer Professional Certificate**. The project aims to provide a modern, responsive, and interactive user experience, allowing customers to explore the menu, learn more about the restaurant, and make reservations easily.
 
 ---
 
-## Features
-- **Responsive Design**: Adaptable layout for different screen sizes, ensuring an optimal user experience on both mobile and desktop devices.
-- **Active Navigation**: Menu links change color based on the active section.
-- **Interactive Elements**: Buttons and visual transitions enhance user interaction.
+## 💻 Technologies Used
+
+### 🖥️ Frontend
+- **⚛️ React**: Main library for building user interface components.
+- **📘 TypeScript**: Adds static typing to JavaScript, improving code quality and maintainability.
+- **⚡ Vite**: A fast development tool for building modern web applications.
+- **🎨 Tailwind CSS**: A utility-first CSS framework for rapid and customizable design.
+
+### 🖼️ Assets
+- **🖼️ Images**: Optimized images to improve performance.
+- **🔤 Google Fonts**: 'Markazi Text' font for an elegant and readable style.
+
+### 🛠️ Development Tools
+- **🧩 Node.js**: Runtime environment for building server-side and networking applications.
+- **🧹 ESLint and Prettier**: Tools to ensure code quality and consistency.
+- **🔗 Git and GitHub**: Version control and remote repository management.
 
 ---
 
-## Project Structure
-### Architecture: Component-Based Architecture
+## 🌟 Features
+- **📱 Responsive Design**: Adaptable layout for different screen sizes, ensuring an optimal user experience on both mobile and desktop devices.
+- **🎯 Active Navigation**: Menu links change color based on the active section.
+- **💡 Interactive Elements**: Buttons and visual transitions enhance user interaction.
+
+---
+
+## 🗂️ Project Structure
+### 🏛️ Architecture: Component-Based Architecture
 The project follows a component-based architecture, where each part of the UI is broken down into reusable components. The structure is organized into logical folders to separate concerns and improve maintainability.
 
 ```
@@ -78,64 +78,64 @@ The project follows a component-based architecture, where each part of the UI is
 
 ---
 
-## Installation and Setup
+## ⚙️ Installation and Setup
 
-### Prerequisites
+### ✅ Prerequisites
 Ensure you have the following installed:
 - **Node.js** (v16 or higher)
 - **npm** (v8 or higher)
 
-### Steps to Install
-1. Clone the repository:
+### 📦 Steps to Install
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/b1too/little-lemon-capstone-bito.git
    ```
-2. Navigate to the project directory:
+2. **Navigate to the project directory**:
    ```bash
    cd little-lemon-capstone-bito
    ```
-3. Install dependencies:
+3. **Install dependencies**:
    ```bash
    npm install
    ```
-4. Run the development server:
+4. **Run the development server**:
    ```bash
    npm run dev
    ```
-5. Open your browser and go to `http://localhost:5173`.
+5. **Open your browser** and go to `http://localhost:5173`.
 
 ---
 
-## Contribution
+## 🤝 Contribution
 If you would like to contribute to the project, follow these steps:
-1. Fork the repository.
-2. Create a new branch:
+1. **Fork the repository**.
+2. **Create a new branch**:
    ```bash
    git checkout -b feature/new-feature
    ```
-3. Make your changes and commit them:
+3. **Make your changes and commit them**:
    ```bash
    git commit -m "Add new feature"
    ```
-4. Push your changes:
+4. **Push your changes**:
    ```bash
    git push origin feature/new-feature
    ```
-5. Open a pull request on GitHub.
+5. **Open a pull request** on GitHub.
 
 ---
 
-## License
+## 📜 License
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Contact
+## 📧 Contact
 For questions or suggestions about the project, feel free to contact us:
-- **Email**: contacto@b1to.dev
-- **GitHub**: [b1too](https://github.com/b1too)
+- **📩 Email**: contacto@b1to.dev
+- **🐙 GitHub**: [b1too](https://github.com/b1too)
 
 ---
 
-© 2025 Little Lemon. All rights reserved.
+© 2025 🍋 Little Lemon. All rights reserved.
 
