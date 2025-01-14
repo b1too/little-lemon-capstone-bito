@@ -1,20 +1,18 @@
 import Nav from '../Nav';
+import Logo from '../../../public/logo.svg';
 
 const Header = () => {
   return (
-    <header className="bg-green-500 text-white p-4 flex items-center justify-between">
-      {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <img
-          src="/assets/logo.png"
-          alt="Little Lemon Logo"
-          className="w-10 h-10"
-        />
-        <h1 className="text-2xl font-bold">Little Lemon</h1>
-      </div>
+    <header className="bg-white text-slate-900 pt-8 pb-16">
+      <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src={Logo} alt="Little Lemon Logo" className="w-40 h-auto" />
+        </div>
 
-      {/* Navigation */}
-      <Nav />
+        {/* Navigation */}
+        <Nav />
+      </div>
     </header>
   );
 };
