@@ -1,50 +1,141 @@
-# React + TypeScript + Vite
+# Little Lemon Capstone Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Little Lemon is a Mediterranean restaurant website created as the capstone project for Meta's Frontend Developer Professional Certificate. The project aims to provide a modern, responsive, and interactive user experience, allowing customers to explore the menu, learn more about the restaurant, and make reservations easily.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+### Frontend
+- **React**: Main library for building user interface components.
+- **TypeScript**: Adds static typing to JavaScript, improving code quality and maintainability.
+- **Vite**: A fast development tool for building modern web applications.
+- **Tailwind CSS**: A utility-first CSS framework for rapid and customizable design.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Assets
+- **Images**: Optimized images to improve performance.
+- **Google Fonts**: 'Markazi Text' font for an elegant and readable style.
 
-- Configure the top-level `parserOptions` property like this:
+### Development Tools
+- **Node.js**: Runtime environment for building server-side and networking applications.
+- **ESLint and Prettier**: Tools to ensure code quality and consistency.
+- **Git and GitHub**: Version control and remote repository management.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## Features
+- **Responsive Design**: Adaptable layout for different screen sizes, ensuring an optimal user experience on both mobile and desktop devices.
+- **Active Navigation**: Menu links change color based on the active section.
+- **Interactive Elements**: Buttons and visual transitions enhance user interaction.
+
+---
+
+## Project Structure
+### Architecture: Component-Based Architecture
+The project follows a component-based architecture, where each part of the UI is broken down into reusable components. The structure is organized into logical folders to separate concerns and improve maintainability.
+
+```
+/ Little Lemon
+|-- /public
+|   |-- favicon.png
+|   |-- logo.svg
+|   |-- og-image.png
+|
+|-- /src
+|   |-- /assets
+|   |-- /components
+|       |-- /About
+|           |-- index.tsx
+|       |-- /Booking
+|           |-- index.tsx
+|       |-- /Footer
+|           |-- index.tsx
+|       |-- /Header
+|           |-- index.tsx
+|       |-- /Menu
+|           |-- index.tsx
+|       |-- /Nav
+|           |-- index.tsx
+|   |-- App.tsx
+|   |-- main.tsx
+|   |-- index.css
+|   |-- vite-env.d.ts
+|
+|-- .gitignore
+|-- eslint.config.js
+|-- index.html
+|-- package.json
+|-- package-lock.json
+|-- postcss.config.js
+|-- README.md
+|-- tailwind.config.js
+|-- tsconfig.app.json
+|-- tsconfig.json
+|-- tsconfig.node.json
+|-- vite.config.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Installation and Setup
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js** (v16 or higher)
+- **npm** (v8 or higher)
+
+### Steps to Install
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/b1too/little-lemon-capstone-bito.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd little-lemon-capstone-bito
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open your browser and go to `http://localhost:3000`.
+
+---
+
+## Contribution
+If you would like to contribute to the project, follow these steps:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/new-feature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push your changes:
+   ```bash
+   git push origin feature/new-feature
+   ```
+5. Open a pull request on GitHub.
+
+---
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contact
+For questions or suggestions about the project, feel free to contact us:
+- **Email**: contacto@b1to.dev
+- **GitHub**: [b1too](https://github.com/b1too)
+
+---
+
+© 2025 Little Lemon. All rights reserved.
+
