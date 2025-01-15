@@ -1,14 +1,14 @@
 # 🍋 Little Lemon Capstone Project
 
 ## 📖 Description
-**Little Lemon** is a Mediterranean restaurant website created as the capstone project for **Meta's Frontend Developer Professional Certificate**. The project aims to provide a modern, responsive, and interactive user experience, allowing customers to explore the menu, learn more about the restaurant, and make reservations easily.
+**Little Lemon** is a Mediterranean restaurant website created as the capstone project for **Meta's Frontend Developer Professional Certificate**. This project aims to deliver a modern, responsive, and interactive user experience that allows customers to explore the menu, learn more about the restaurant, and easily make table reservations through an interactive booking system.
 
 ---
 
 ## 💻 Technologies Used
 
 ### 🖥️ Frontend
-- **⚛️ React**: Main library for building user interface components.
+- **⚛️ React**: Main library for building user interfaces.
 - **📘 TypeScript**: Adds static typing to JavaScript, improving code quality and maintainability.
 - **⚡ Vite**: A fast development tool for building modern web applications.
 - **🎨 Tailwind CSS**: A utility-first CSS framework for rapid and customizable design.
@@ -25,9 +25,12 @@
 ---
 
 ## 🌟 Features
-- **📱 Responsive Design**: Adaptable layout for different screen sizes, ensuring an optimal user experience on both mobile and desktop devices.
+- **📱 Responsive Design**: The website adapts to different screen sizes, ensuring an optimal user experience on both mobile and desktop devices.
 - **🎯 Active Navigation**: Menu links change color based on the active section.
 - **💡 Interactive Elements**: Buttons and visual transitions enhance user interaction.
+- **📅 Booking System**: Users can select a day, table, and available time slot to make a reservation.
+- **💌 SweetAlert Integration**: Used to show booking confirmation and ticket download messages with stylish alerts.
+- **⚡ Fast Performance**: Thanks to Vite and optimized assets.
 
 ---
 
@@ -44,11 +47,16 @@ The project follows a component-based architecture, where each part of the UI is
 |
 |-- /src
 |   |-- /assets
+|       |-- /images
+|           |-- restaurantfood.png
 |   |-- /components
 |       |-- /About
 |           |-- index.tsx
-|       |-- /Booking
+|       |-- /Alert
 |           |-- index.tsx
+|       |-- /Booking
+|           |-- BookingTable.tsx
+|           |-- BookingTicket.tsx
 |       |-- /Footer
 |           |-- index.tsx
 |       |-- /Header
@@ -56,6 +64,11 @@ The project follows a component-based architecture, where each part of the UI is
 |       |-- /Menu
 |           |-- index.tsx
 |       |-- /Nav
+|           |-- index.tsx
+|   |-- /pages
+|       |-- /Booking
+|           |-- index.tsx
+|       |-- /Home
 |           |-- index.tsx
 |   |-- App.tsx
 |   |-- main.tsx
@@ -103,6 +116,15 @@ Ensure you have the following installed:
    npm run dev
    ```
 5. **Open your browser** and go to `http://localhost:5173`.
+
+---
+
+## 📋 Booking Process
+1. **Select a Day**: Choose a day from the available next 7 days.
+2. **Select a Table**: Click on an available table to see the time slots.
+3. **Select a Time**: Pick an available time slot.
+4. **Enter Your Details**: Provide your name and email to confirm the booking.
+5. **Confirm and Download Ticket**: The booking is confirmed via SweetAlert, and users can download the booking ticket.
 
 ---
 
