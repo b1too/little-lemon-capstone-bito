@@ -4,7 +4,7 @@ export const menuItems = [
       description:
         "The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago-style feta cheese, garnished with crunchy garlic and rosemary croutons.",
       price: "$12.99",
-      image: "/src/assets/images/greekSalad.jpg",
+      image: "/assets/images/greekSalad.jpg",
       category: "Salads",
     },
     {
@@ -12,7 +12,7 @@ export const menuItems = [
       description:
         "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
       price: "$7.99",
-      image: "/src/assets/images/bruchetta.svg",
+      image: "/assets/images/bruchetta.svg",
       category: "Starters",
     },
     {
@@ -20,7 +20,7 @@ export const menuItems = [
       description:
         "This comes straight from grandma’s recipe book. Every last ingredient has been sourced and is as authentic as can be imagined.",
       price: "$6.99",
-      image: "/src/assets/images/lemon.jpg",
+      image: "/assets/images/lemon.jpg",
       category: "Desserts",
     },
     {
@@ -28,7 +28,7 @@ export const menuItems = [
       description:
         "A classic Italian pasta dish with a rich, savory meat sauce.",
       price: "$14.50",
-      image: "/src/assets/images/spaghetti.jpg",
+      image: "/assets/images/spaghetti.jpg",
       category: "Mains",
     },
     {
@@ -36,7 +36,7 @@ export const menuItems = [
       description:
         "Breaded chicken breast topped with marinara sauce and melted cheese.",
       price: "$15.25",
-      image: "/src/assets/images/chicken-parmesan.jpg",
+      image: "/assets/images/chicken-parmesan.jpg",
       category: "Mains",
     },
     {
@@ -44,7 +44,7 @@ export const menuItems = [
       description:
         "A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.",
       price: "$9.50",
-      image: "/src/assets/images/tiramisu.jpg",
+      image: "/assets/images/tiramisu.jpg",
       category: "Desserts",
     },
   ];
