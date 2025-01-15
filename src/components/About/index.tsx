@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import RestaurantLogo from "../../assets/images/restaurantfood.png";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleReserveClick = () => {
+    navigate("/booking");
+  };
+
   return (
-    <section className="bg-[#495e57] py-8 relative">
+    <section id="about" className="bg-[#495e57] py-8 relative">
       <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
         {/* Content Section */}
         <div className="space-y-4 max-w-md text-center md:text-left">
@@ -17,7 +24,10 @@ const About = () => {
             Little Lemon is a family-owned Mediterranean restaurant focused on
             traditional recipes served with a modern twist.
           </p>
-          <button className="bg-[#f4ce14] text-white text-xl font-semibold py-3 px-4 rounded-2xl mt-4 hover:bg-[#f4ce14]/90 transition">
+          <button
+            onClick={handleReserveClick}
+            className="bg-[#f4ce14] text-white text-xl font-semibold py-3 px-4 rounded-2xl mt-4 hover:bg-[#f4ce14]/90 transition"
+          >
             Reserve a Table
           </button>
         </div>

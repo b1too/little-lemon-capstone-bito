@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { menuItems } from "./data";
+import { handleOrderClick } from "../Alert";
 import Modal from "../Modal";
 
 const Menu = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Get unique categories
   const categories = [...new Set(menuItems.map((item) => item.category))];
 
   return (
-    <section className="max-w-screen-xl mx-auto px-6 py-28 lg:py-40">
+    <section id="menu" className="max-w-screen-xl mx-auto px-6 py-28 lg:py-40">
       {/* Title and Button */}
       <div className="w-full flex flex-col md:flex-row items-center justify-between mb-5 md:mb-12 gap-6 md:gap-4">
         <h2 className="text-5xl font-bold text-center sm:text-left">
@@ -19,7 +19,7 @@ const Menu = () => {
           className="bg-[#f4ce14] text-white text-lg font-semibold py-3 px-6 rounded-lg hover:bg-[#ddb013] transition"
           onClick={() => setIsModalOpen(true)}
         >
-          Online Menu
+          View Menu
         </button>
       </div>
 
@@ -42,7 +42,7 @@ const Menu = () => {
                 <span className="text-xl font-semibold text-[#f4ce14]">
                   {item.price}
                 </span>
-                <button className="text-[#495e57] font-medium hover:underline">
+                <button onClick={handleOrderClick} className="text-[#495e57] font-medium hover:underline">
                   Order a delivery
                 </button>
               </div>
@@ -53,7 +53,6 @@ const Menu = () => {
 
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <h2 className="text-3xl font-bold mb-6">Full Menu</h2>
         {categories.map((category) => (
           <div key={category} className="mb-8">
             {/* Category Header with Line */}
@@ -67,21 +66,24 @@ const Menu = () => {
               {menuItems
                 .filter((item) => item.category === category)
                 .map((item, index) => (
-                  <li key={index} className="pl-4 pb-4 flex justify-between items-center">
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <h4 className="text-xl font-medium">{item.name}</h4>
-                        <span className="text-lg font-bold text-[#f4ce14]">{item.price}</span>
-                      </div>
+                  <li
+                    key={index}
+                    className="pl-4 pb-4 flex items-start justify-between"
+                  >
+                    <div className="pr-6">
+                      <h4 className="text-xl font-medium">{item.name}</h4>
                       <p className="text-gray-700 mt-1">{item.description}</p>
                     </div>
-
+                    <span className="text-lg font-bold text-[#f4ce14] whitespace-nowrap">
+                      {item.price}
+                    </span>
                   </li>
                 ))}
             </ul>
           </div>
         ))}
       </Modal>
+
 
     </section>
   );
