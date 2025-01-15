@@ -27,7 +27,7 @@ const About = () => {
           <img
             src={RestaurantLogo}
             alt="Little Lemon Specials"
-            className="rounded-2xl shadow-lg w-96 h-72 lg:h-96 object-cover lg:absolute lg:-top-32 lg:right-10"
+            className="rounded-2xl shadow-lg w-96 h-72 lg:h-96 object-cover lg:absolute lg:-top-32 lg:right-0"
           />
         </div>
       </div>

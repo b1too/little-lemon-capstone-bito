@@ -1,12 +1,88 @@
+import { useState } from "react";
+import { menuItems } from "./data";
+import Modal from "../Modal";
+
 const Menu = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Get unique categories
+  const categories = [...new Set(menuItems.map((item) => item.category))];
+
   return (
-    <section className="p-6 bg-gray-50">
-      <h2 className="text-3xl font-bold">Menu</h2>
-      <ul className="mt-4 space-y-2">
-        <li>Baked Feta Cheese</li>
-        <li>Grilled Lamb Chops</li>
-        <li>Stuffed Peppers</li>
-      </ul>
+    <section className="max-w-screen-xl mx-auto px-6 py-28 lg:py-40">
+      {/* Title and Button */}
+      <div className="w-full flex flex-col md:flex-row items-center justify-between mb-5 md:mb-12 gap-6 md:gap-4">
+        <h2 className="text-5xl font-bold text-center sm:text-left">
+          This week&apos;s specials!
+        </h2>
+        <button
+          className="bg-[#f4ce14] text-white text-lg font-semibold py-3 px-6 rounded-lg hover:bg-[#ddb013] transition"
+          onClick={() => setIsModalOpen(true)}
+        >
+          Online Menu
+        </button>
+      </div>
+
+      {/* Featured Menu Items (only the first 3) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {menuItems.slice(0, 3).map((item, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col justify-between transform hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-6 flex flex-col flex-grow">
+              <h3 className="text-2xl font-bold">{item.name}</h3>
+              <p className="text-gray-700 my-4 flex-grow">{item.description}</p>
+              <div className="flex items-center justify-between mt-4">
+                <span className="text-xl font-semibold text-[#f4ce14]">
+                  {item.price}
+                </span>
+                <button className="text-[#495e57] font-medium hover:underline">
+                  Order a delivery
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h2 className="text-3xl font-bold mb-6">Full Menu</h2>
+        {categories.map((category) => (
+          <div key={category} className="mb-8">
+            {/* Category Header with Line */}
+            <div className="flex items-center mb-4">
+              <h3 className="text-2xl font-semibold text-[#f4ce14]">{category}</h3>
+              <div className="flex-grow h-[1px] bg-[#f4ce14] ml-4"></div>
+            </div>
+
+            {/* Menu Items */}
+            <ul className="space-y-4">
+              {menuItems
+                .filter((item) => item.category === category)
+                .map((item, index) => (
+                  <li key={index} className="pl-4 pb-4 flex justify-between items-center">
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <h4 className="text-xl font-medium">{item.name}</h4>
+                        <span className="text-lg font-bold text-[#f4ce14]">{item.price}</span>
+                      </div>
+                      <p className="text-gray-700 mt-1">{item.description}</p>
+                    </div>
+
+                  </li>
+                ))}
+            </ul>
+          </div>
+        ))}
+      </Modal>
+
     </section>
   );
 };

@@ -33,7 +33,7 @@ const Nav = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex items-center space-x-8">
+      <nav className="hidden lg:flex items-center">
         <ul className="flex items-center space-x-16 text-lg font-medium tracking-tight">
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -63,7 +63,7 @@ const Nav = () => {
 
       {/* Mobile Navigation */}
       <nav
-        className={`fixed m-2 bottom-0 left-0 right-0 bg-[#495e57] border-t border-gray-300 lg:hidden flex justify-around items-center p-4 rounded-xl transition-transform duration-500 ease-in-out transform ${isMobile ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+        className={`fixed z-20 m-2 bottom-0 left-0 right-0 bg-[#495e57] border-t border-gray-300 lg:hidden flex justify-around items-center p-4 rounded-xl transition-transform duration-500 ease-in-out transform ${isMobile ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
           }`}
       >
         {[...navLinks, { href: "/order", label: "Order", icon: "mgc_shopping_cart_1_line" }].map(
